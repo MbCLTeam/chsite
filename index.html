@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Página oficial do CoffeeHub">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="CoffeeHub Team">
+    <title>CoffeeHub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #007bff, #00c9ff);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 15px;
+            padding: 15px 25px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            border: none;
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-discord {
+            background: linear-gradient(90deg, #5865f2, #4754c4);
+            color: #ffffff;
+        }
+        .btn-download {
+            background: linear-gradient(90deg, #28a745, #1e7732);
+            color: #ffffff;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            text-align: center;
+            padding: 8px 0;
+            font-size: 0.85rem;
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #ffffff;
+            line-height: 1.2;
+        }
+        footer a {
+            color: #00ffff;
+            text-decoration: underline;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+            animation: glow 1s infinite alternate;
+        }
+        footer a:hover {
+            color: #00ffff;
+        }
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px rgba(0, 255, 255, 0.5);
+            }
+            100% {
+                text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px rgba(0, 255, 255, 0.7);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CoffeeHub</h1>
+        <p>Página oficial do CoffeeHub</p>
+    </header>
+    
+    <div class="content">
+        <button class="btn btn-discord" onclick="redirectTo('https://discord.gg/mzzStRerxH')">
+            <i class="fab fa-discord icon" style="margin-right: 10px;"></i> Suporte no Discord
+        </button>
+        <button class="btn btn-download" onclick="redirectTo('https://coffeehub.gruponext.online/downloads')">
+            <i class="fas fa-download icon" style="margin-right: 10px;"></i> Página de Downloads
+        </button>
+    </div>
+    
+    <footer>
+        <p>&copy; CoffeeHub - Todos os direitos reservados<br>Powered by <b><a href="https://gruponext.online/?REF=chub" onclick="redirectTo('https://gruponext.online/?REF=chub')">GrupoNext</a></b></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
